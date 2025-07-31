@@ -4,5 +4,11 @@
 
 var http = require('http'); // não precisa adicionar o diretorio pois já um modulo nativo
 
-http.createServer().listen(8081); // criação do vervidor e escolha da porta 
-console.log("Server rodando")
+// http.createServer().listen(8081); // criação do vervidor e escolha da porta 
+
+
+// como exibir uma mensagem no servidor? adiciona dentro do createServer uma função de callback, que recebe 2 parametros req e res,
+
+http.createServer(function(req,res){
+    res.end("Hello world!");
+}).listen(8081);
