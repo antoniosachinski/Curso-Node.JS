@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 app.get("/", function(req, res){
-    res.send("aaa");
+    res.sendFile(__dirname + "/html/index.html");
 })
 
 app.listen(8081);
