@@ -5,7 +5,7 @@ const aplicado = expresso();
 aplicado.get("/", function (req, res){
     res.send("Rota principal");
 })
-// rotas a partir da principla
+// rotas a partir da principal
 aplicado.get("/outra", function(req, res){
     res.send("Outra rota");
 })
