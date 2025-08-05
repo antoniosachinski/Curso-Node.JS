@@ -5,7 +5,7 @@ app.get("/", function(req, res){
     res.send("a");
 })
 app.get("/ola/:nome/:cargo", function(req, res){
-    res.send("Olá " + req.params.nome + ", seu cargo é " + req.params.cargo);
+    res.send("<h1> Olá " + req.params.nome + ", seu cargo é " + req.params.cargo + "</h1>");
 })
 
 app.listen(8081);
