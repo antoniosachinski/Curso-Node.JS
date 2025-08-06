@@ -11,4 +11,10 @@ aplicado.get("/outra", function(req, res){
 })
 
 
-aplicado.listen(8081);
+aplicado.listen(8081, function(erro){
+    if(erro){
+        console.log("Ocorreu um erro!")
+    }else{
+        console.log("Servidor funcionando!")
+    }
+});
