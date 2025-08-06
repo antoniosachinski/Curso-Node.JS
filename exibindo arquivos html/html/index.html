@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="nome"></h1>
+      <p>Desenvolvedor de Software</p>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="sobre">
+      <h2 class="titulo">Sobre Mim</h2>
+      <p class="paragrafo">
+        Sou estudante de Engenharia de Software na UNINTER, com experiência em
+        HTML5, CSS, JavaScript (Node.js) e Python, além de conhecimentos em
+        bancos de dados SQL/MySQL. Tenho interesse em desenvolvimento de
+        software, automação e infraestrutura de TI, sempre buscando aprimorar
+        minhas habilidades e explorar novas tecnologias. Gosto de criar soluções
+        eficientes e funcionais, combinando lógica e criatividade no
+        desenvolvimento de software. Estou sempre aprendendo e acompanhando as
+        tendências do setor para oferecer as melhores soluções tecnológicas.
+      </p>
+    </section>
+
+    <section id="projetos">
+      <h2 class="titulo">Projetos</h2>
+      <div class="projeto">
+        <h3 class="titulotitulo">Projeto 1</h3>
+        <p class="paragrafo">Descrição breve do projeto.</p>
+      </div>
+      <div class="projeto">
+        <h3 class="titulotitulo">Projeto 2</h3>
+        <p class="paragrafo">Descrição breve do projeto.</p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="titulo">Contato</h2>
+      <p id="contatos">
+        Email:
+        <a href="mailto:as.sachinski@gmail.com" class="email"
+          >as.sachinski@gmail.com</a
+        >
+      </p>
+      <p id="contatos">
+        Celular:
+        <a href="tel:+5511999999999" class="telefone">+55 11 99984-3059</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; antoniosachinski</p>
+      <p>
+        <a href="https://www.linkedin.com/in/antoniosachinski/" target="_blank"
+          >LinkedIn</a
+        >
+        |
+        <a href="https://github.com/antoniosachinski/" target="_blank"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+    <script>// scrollar suave para navegação
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// efeito de digitação para o nome
+const nome = "Antonio Sachinski";
+let i = 0;
+function escreverNome() {
+  if (i < nome.length) {
+    document.getElementById("nome").textContent += nome[i];
+    i++;
+    setTimeout(escreverNome, 100);
+  }
+}
+
+escreverNome();</script>
+<style>
+  /*----------corpo----------*/
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+/*----------cabeçalho----------*/
+header {
+  background-color: #333;
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/*----------seções----------*/
+section {
+  text-align: justify;
+  text-align-last: left;
+  padding: 40px 10%;
+}
+.titulo {
+  padding: 0px 30px 0px 30px;
+  color: white;
+  border-left: 4px solid #bbb;
+  padding-left: 10px;
+  font-size: 24px;
+}
+.paragrafo {
+  padding: 0px 30px 30px 30px;
+}
+
+/*----------projetos----------*/
+.projeto {
+  background-color: #444;
+  padding: 5px 0px 10px 5px;
+  margin: 20px;
+  border-radius: 3px;
+}
+.titulotitulo {
+  padding: 0px 5px 0px 30px;
+}
+
+/*----------contato----------*/
+.email, .telefone {
+  color: #bbb;
+  text-decoration: none;
+}
+.email:hover, .telefone:hover {
+  color: white;
+}
+#contatos {
+  padding: 0px 30px 0px 30px;
+}
+
+/*----------rodapé----------*/
+footer {
+  font-style: italic;
+  padding-bottom: 15px;
+  color: #bbb;
+}
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+}
+
+</style>
+  </body>
+</html>
