@@ -1,2 +1,2 @@
-# Curso Node.JS
+# Formação Node.js
 
