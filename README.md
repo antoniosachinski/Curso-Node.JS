@@ -1,4 +1,4 @@
-# Formação Node.js - Projetos Práticos
+# Formação Node.js
 
 Este repositório contém os projetos desenvolvidos durante a **Formação Node.js**, uma jornada completa com foco em prática, que tem como objetivo transformar qualquer estudante em um desenvolvedor Node.js pronto para o mercado.
 
